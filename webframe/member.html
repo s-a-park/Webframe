@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="member.css">
+    <title>회원정보관리</title>
+   
+
+
+</head>
+<body>
+    <script>
+        let index = 1;
+         let Allmember = new Array();
+
+        /* function Member(id, name, iPath){
+            this.id = id;
+            this.name = name;
+            this.iPath = iPath;
+         }*/
+         
+        class Member{
+            constructor(id,name,path){
+                this.id = id;
+                this.name = name;
+                this.image = path;
+            }
+        };
+
+         toString = function(){
+            let str ="";
+            str += "ID: "+this.id + "NAME : "+this.name+ " "+this.image;
+            return str; 
+         };
+
+    function registration(){
+        let id = new Date().getFullYear().toString() + index;
+             index++;
+
+        let name = document.getElementById("na").value;
+        let img = document.getElementById("img").value;
+        let iPath = "./images/" + img + ".jpg";
+   
+        let str = "<tr><td>"+ id +"</td><td>"+ name +"</td><td><img src='"+ iPath +"' width='100'></img></td></tr>";
+        
+        let tbody = document.getElementById("tbody");
+        tbody.innerHTML += str;
+
+        let t = new Member(id, name, path);
+        Allmember.push(t);
+
+    };
+
+    function list(){
+
+         let wrap = document.getElementById("wrap");
+         wrap.innerHTML = "";
+         wrap.style.visibility ="visible";
+         for(let i=0; i<Allmember.length; i++){
+              wrap.innerHTML += Allmember[i]+"<br/>";
+         }
+};
+
+window.onload = function(){
+  
+    let reg = document.getElementById("reg");
+    reg.addEventListener("click",registration);
+    let print = document.getElementById("print");
+    print.addEventListener("click",list);
+};
+
+    </script>
+    <h2>회원가입하기</h2>
+    <form method="post" action="">
+        <div>
+       이름: <input type="text" id="na" name="inna"></div>
+       대표사진: <select name="" id="img">
+        <option>Chrysanthemum</option>
+        <option>Desert</option>
+        <option>Jellyfish</option>
+        <option>Koala</option>
+        <option>Lighthouse</option>
+        <option>Penguins</option>
+       </select>
+    <div>
+        <button id="reg">가입하기</button>
+    </div>
+    </form>
+    <hr/>
+    <h2>회원 목록</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>회원번호</th>
+                <th>이름</th>
+                <th>이미지</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <hr/>
+    <button id="print">회원 목록 출력하기</button>
+    <div id="wrap" style="border: 3px solid red; visibility: hidden;">
+
+    </div>
+    <hr/>
+    <a href="http://naver.com">네이버 바로가기</a>
+    <br>
+    <img src="images/Penguins.jpg" width="100px" height="100px">
+</body>
+</html>

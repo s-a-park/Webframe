@@ -1,0 +1,28 @@
+body {
+    background-color:aqua;
+    /*color:#467946; */
+}
+hr {
+    height:10px;
+    background-color:rgb(125,30,250);
+}
+p {
+    /* background-color:green; */
+    color:blue;
+}
+h1 {
+    font-size:32px;
+}
+h1:first-letter{
+    font-size:40px;
+
+}
+div {
+
+    /* color:yellow; */
+    font-style:bold;
+}
+span {
+    color:red;
+    font-size:20px;
+}

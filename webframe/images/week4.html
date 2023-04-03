@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 연습 페이지</title>
+    <link rel="stylesheet" type="text/css" href="./common.css">
+    <style>
+        div {
+           /* color:brown;*/
+           text-align:center;
+        }
+        li {
+            background-color: violet;
+        }
+        #f3 {
+            background-color:yellow;
+        }
+        li.second {
+            background-color:blue;
+            font-size:20px;
+
+        }
+
+        div>ul {
+            border:3px dotted red;
+        }
+        li:hover {
+            background-color:pink;
+        }
+        a {
+            color:white;
+            text-decoration:none;
+
+        }
+        a:active {
+            color: yellow;
+        }
+        a:visited {
+            color : black;
+        }
+        input {
+            color:blue;
+            background-color:yellow;
+        }
+        input:focus {
+            font-size:25px;
+            background-color:pink;
+        }
+        input:hover{
+            background-color:blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placehodler="name"><br>
+        <input type="password" placeholder="pass"><br>
+        <input type="button" value="누르세요.">
+    </form>
+    <h1>스타일을 위한 연습 페이지</h1>
+        <p>첫 번째 paragraph
+        <div>자기 소개의 내용을 입력해 봅시다.</div>
+        <hr>
+        <div>제 이름은 <span>백승호</span> 입니다. </div>
+        <div style="border:1px dashed red">제가 자주가는 사이트는 다음과 같아요.</div>
+        <a href="http://www.google.com">Go Google</a><br>
+        </p>
+    <hr>
+    <h1>Test Title</h1>
+    <ul>
+        <li id="f1">First Item 1</li>
+        <li id="f2">First Item 2</li>
+        <li id="f3">First Item 3</li>
+        <li id="f4" class="second">First Item 4</li>
+        <li id="f5">First Item 5</li>
+    </ul>
+    <hr>
+    <ul>
+        <li id="s1" class="second">Second Item 1</li>
+        <li id="s2" class="second">Second Item 2</li>
+        <li id="s3" class="second">Second Item 3</li>
+        <li id="s4" class="second">Second Item 4</li>
+        <li id="s5" class="second">Second Item 5</li>
+    </ul>
+    
+    
+</body>
+</html>
+
+
+
+body {
+    background-color:aqua;
+    /*color:#467946; */
+}
+hr {
+    height:10px;
+    background-color:rgb(125,30,250);
+}
+p {
+    /* background-color:green; */
+    color:blue;
+}
+h1 {
+    font-size:32px;
+}
+h1:first-letter{
+    font-size:40px;
+
+}
+div {
+
+    /* color:yellow; */
+    font-style:bold;
+}
+span {
+    color:red;
+    font-size:20px;
+}
